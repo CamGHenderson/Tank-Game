@@ -317,8 +317,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\Light\Desktop\4coder\Tank-Game\src\Game.cpp" />
-    <ClInclude Include="C:\Users\Light\Desktop\4coder\Tank-Game\src\Game.h" />
+    <ClCompile Include="..\..\src\Engine\Graphics\Graphics.cpp" />
+    <ClCompile Include="..\..\src\Engine\Graphics\Shape.cpp" />
     <ClCompile Include="C:\Users\Light\Desktop\4coder\Tank-Game\src\app.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -328,6 +328,15 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\Engine\Graphics\Color.h" />
+    <ClInclude Include="..\..\src\Engine\Graphics\Graphics.h" />
+    <ClInclude Include="..\..\src\Engine\Graphics\Shape.h" />
+    <ClInclude Include="..\..\src\Engine\Graphics\Sprite.h" />
+    <ClInclude Include="..\..\src\Engine\Graphics\Texture.h" />
+    <ClInclude Include="..\..\src\Engine\Graphics\Transform.h" />
+    <ClInclude Include="..\..\src\Engine\pch.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

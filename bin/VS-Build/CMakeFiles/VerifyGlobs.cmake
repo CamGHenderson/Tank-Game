@@ -5,7 +5,6 @@ cmake_policy(SET CMP0009 NEW)
 # SOURCES at CMakeLists.txt:4 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "C:/Users/Light/Desktop/4coder/Tank-Game/src/*.cpp")
 set(OLD_GLOB
-  "C:/Users/Light/Desktop/4coder/Tank-Game/src/Game.cpp"
   "C:/Users/Light/Desktop/4coder/Tank-Game/src/app.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
@@ -16,7 +15,6 @@ endif()
 # SOURCES at CMakeLists.txt:4 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "C:/Users/Light/Desktop/4coder/Tank-Game/src/*.h")
 set(OLD_GLOB
-  "C:/Users/Light/Desktop/4coder/Tank-Game/src/Game.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
