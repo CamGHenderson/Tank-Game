@@ -1,0 +1,10 @@
+^C:\USERS\LIGHT\DESKTOP\4CODER\TANK-GAME\SRC\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Light/Desktop/4coder/Tank-Game/src -BC:/Users/Light/Desktop/4coder/Tank-Game/bin/VS-Build --check-stamp-file C:/Users/Light/Desktop/4coder/Tank-Game/bin/VS-Build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "Game.h"
 
 sf::RenderWindow window;
 
@@ -22,6 +23,8 @@ int main()
 {
     window.create(sf::VideoMode(800, 600), "Tank Game");
     
+    Game game("Send Help");
+
     while(window.isOpen())
     {
         handleEvents();

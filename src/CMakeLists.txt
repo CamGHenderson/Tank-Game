@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.0.0)
+project(Tank-Game)
+find_package(SFML 2.4 COMPONENTS audio graphics window system REQUIRED)
+file(GLOB SOURCES CONFIGURE_DEPENDS *.h *.cpp)
+add_executable(Tank-Game ${SOURCES})
+target_link_libraries(Tank-Game sfml-audio sfml-graphics sfml-window sfml-system)
+set_target_properties(Tank-Game PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})

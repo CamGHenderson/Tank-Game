@@ -1,0 +1,3 @@
+C:/Users/Light/Desktop/4coder/Tank-Game/bin/VS-Build/CMakeFiles/Tank-Game.dir
+C:/Users/Light/Desktop/4coder/Tank-Game/bin/VS-Build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Light/Desktop/4coder/Tank-Game/bin/VS-Build/CMakeFiles/ZERO_CHECK.dir
