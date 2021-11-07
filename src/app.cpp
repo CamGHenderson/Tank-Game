@@ -1,37 +1,27 @@
-#include <SFML/Graphics.hpp>
-#include <iostream>
-#include "Game.h"
-
-sf::RenderWindow window;
-
-void handleEvents()
-{
-    sf::Event event;
-    while(window.pollEvent(event))
-    {
-        switch(event.type)
-        {
-            case sf::Event::Closed:
-            {
-                window.close();
-            }
-        }
-    }
-}
+#include "Engine/Graphics/Graphics.h"
 
 int main()
 {
-    window.create(sf::VideoMode(800, 600), "Tank Game");
+    Engine::Graphics::Create();
     
-    Game game("Send Help");
-
-    while(window.isOpen())
+    Engine::Graphics::Color white = { 255, 255, 255, 255 };
+    Engine::Graphics::Color red = { 255, 0, 0, 255 };
+    
+    Engine::Graphics::Shape shape = Engine::Graphics::CreateRectangle(100.0f, 100.0f);
+    shape.transform.position.x = Engine::Window::GetWidth() / 2.0f;
+    shape.transform.position.y = Engine::Window::GetHeight() / 2.0f;
+    shape.fillColor = white;
+    shape.outlineColor = red;
+    shape.outlineThickness = 10.0f;
+    
+    while(Engine::Window::IsOpen())
     {
-        handleEvents();
-        
-        window.clear(sf::Color::Black);
-        window.display();
+        Engine::Graphics::Clear();
+        Engine::Graphics::Draw(shape);
+        Engine::Graphics::Update();
     }
+    
+    Engine::Graphics::Destroy();
     
     return 0;
 }
