@@ -3,6 +3,7 @@
 #include "Color.h"
 #include "Transform.h"
 #include "Shape.h"
+#include "Sprite.h"
 
 namespace Engine
 {
@@ -10,6 +11,8 @@ namespace Engine
     {
         void Create();
         void Draw(const Shape& shape);
+        void Draw(const Sprite& sprite);
+        float GetDeltaTime();
         void Clear();
         void Update();
         void Destroy();

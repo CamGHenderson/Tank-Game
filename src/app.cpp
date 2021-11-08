@@ -4,20 +4,17 @@ int main()
 {
     Engine::Graphics::Create();
     
-    Engine::Graphics::Color white = { 255, 255, 255, 255 };
-    Engine::Graphics::Color red = { 255, 0, 0, 255 };
+    Engine::Vec2 center = { Engine::Window::GetWidth() / 2.0f, Engine::Window::GetHeight() / 2.0f };
     
-    Engine::Graphics::Shape shape = Engine::Graphics::CreateRectangle(100.0f, 100.0f);
-    shape.transform.position.x = Engine::Window::GetWidth() / 2.0f;
-    shape.transform.position.y = Engine::Window::GetHeight() / 2.0f;
-    shape.fillColor = white;
-    shape.outlineColor = red;
-    shape.outlineThickness = 10.0f;
+    Engine::Graphics::Sprite sprite;
+    sprite.texture = Engine::Graphics::LoadTexture("res/Textures/TankBody.png");
+    sprite.transform.origin = { sprite.texture.width / 2.0f, sprite.texture.height / 2.0f};
+    sprite.transform.position = center;
     
     while(Engine::Window::IsOpen())
     {
         Engine::Graphics::Clear();
-        Engine::Graphics::Draw(shape);
+        Engine::Graphics::Draw(sprite);
         Engine::Graphics::Update();
     }
     

@@ -10,6 +10,12 @@
     <ClCompile Include="..\..\src\Engine\Graphics\Shape.cpp">
       <Filter>Source Files\Engine\Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Engine\Graphics\GraphicsData.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Engine\Graphics\Texture.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\Light\Desktop\4coder\Tank-Game\src\CMakeLists.txt" />
@@ -23,6 +29,9 @@
     </Filter>
     <Filter Include="Source Files\Engine\Graphics">
       <UniqueIdentifier>{9306bba0-eaa2-4aa1-8eb0-6f7af658065d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\System">
+      <UniqueIdentifier>{7a26e138-3fab-4020-bff4-b5ccb0f46032}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -46,6 +55,12 @@
     </ClInclude>
     <ClInclude Include="..\..\src\Engine\pch.h">
       <Filter>Source Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Engine\Graphics\GraphicsData.h">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Engine\System\Clock.h">
+      <Filter>Source Files\Engine\System</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
