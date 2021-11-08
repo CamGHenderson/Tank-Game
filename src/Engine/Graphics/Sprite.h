@@ -11,5 +11,8 @@ namespace Engine
             Texture texture;
             Transform transform;
         };
+        
+        Sprite CreateSprite(const std::string& path);
+        Sprite CreateSprite(const Texture& texture);
     }
 }
