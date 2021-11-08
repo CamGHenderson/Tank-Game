@@ -10,6 +10,7 @@ Engine::Graphics::Texture Engine::Graphics::LoadTexture(const std::string& path)
     if(!Engine::Graphics::GetTexture(texture.id).loadFromFile(path))
     {
         // TODO Create universal error handling
+        std::cout << "Failed To Load Texture: " << path << std::endl;
         exit(0);
     }
     
@@ -17,4 +18,9 @@ Engine::Graphics::Texture Engine::Graphics::LoadTexture(const std::string& path)
     texture.height = Engine::Graphics::GetTexture(texture.id).getSize().y;
     
     return texture;
+}
+
+void Engine::Graphics::DeleteTexture(const Texture& texture)
+{
+    Engine::Graphics::DeleteTexture(texture.id);
 }
